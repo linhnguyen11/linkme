@@ -1,0 +1,53 @@
+<section class="grid-wrap" data-ng-controller="ArticlesController" data-ng-init="find()">
+    <!--<h1>Articles</h1>-->
+    <!--<ul>-->
+        <!--<li data-ng-repeat="article in articles">-->
+            <!--<a data-ng-href="#!/articles/{{article._id}}" data-ng-bind="article.title"></a>-->
+            <!--<br>-->
+            <!--<small data-ng-bind="article.created | date:'medium'"></small>-->
+            <!--<small>/</small>-->
+            <!--<small data-ng-bind="article.creator.fullName"></small>-->
+            <!--<p data-ng-bind="article.content"></p>-->
+        <!--</li>-->
+    <!--</ul>-->
+    <!--<div data-ng-hide="!articles || articles.length">-->
+        <!--No articles yet, why don't you <a href="/#!/articles/create">create one</a>?-->
+    <!--</div>-->
+
+
+        <div masonry class="grid">
+            <div class="masonry-brick panel grid-item" data-ng-repeat="article in articles | filter:query | orderBy:orderProp | limitTo:quantity">
+                <a data-ng-href="#!/articles/{{article._id}}">
+                    <figure>
+                        <img data-ng-src="{{article.imageurl}}"/>
+                        <figcaption>
+                            <h2 data-ng-bind="article.title"></h2>
+                            <p class="author"><a href="#" data-ng-bind="article.creator.fullName"></a></p>
+                            <p class="icon-links"><a href="#"><i class="pe-7s-like"></i></a>200</p>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+    <button class="btn btn-primary" ng-click="addmore()">Add</button>
+
+
+            <!--<div masonry>-->
+                <!--<div class="masonry-brick" style="width: 220px" data-ng-repeat="article in articles">-->
+                    <!--<img style="width: 100%" data-ng-src="{{article.imageurl}}"/>-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+
+</section>
+
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<!--<script src="/js/colorfinder-1.1.js"></script>-->
+<!--<script src="/js/gridFx.js"></script>-->
+<!--<script>-->
+    <!--$(document).ready(function(){-->
+        <!--new GridScrollFx($('#grid'));-->
+    <!--});-->
+<!--</script>-->

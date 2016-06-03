@@ -1,0 +1,39 @@
+{
+  "name": "linkme",
+  "version": "1.0.0",
+  "description": "An entertaiment website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.3.3",
+    "express": "4.13.3",
+    "morgan": "~1.3.0",
+    "compression": "~1.0.11",
+    "body-parser": "~1.8.0",
+    "method-override": "~2.2.0",
+    "express-session": "~1.7.6",
+    "connect-flash": "~0.1.1",
+    "mongoose": "~4.1.12",
+    "passport": "~0.2.1",
+    "passport-local": "~1.0.0",
+    "passport-facebook": "~1.0.3",
+    "multer": "~0.1.6",
+    "blueimp-file-upload-expressjs": "~0.2.10",
+    "mongoose-auto-increment": "~5.0.1"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}

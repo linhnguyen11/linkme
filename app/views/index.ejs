@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <style type="text/css" media="screen">
+        .a1 {
+            position: absolute;top: 45px;text-align: center;font-size: 20px;width: 80px;background-color: #ccc;
+        }
+        .a2{
+            position: absolute;top: 45px;left: 100px;font-size: 20px;text-align: center;width: 80px;background-color: #ccc;
+        }   
+    </style>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <% if ( userFullName ) { %>
+    <h2>Hello <%=userFullName%> </h2>
+    <a href="/signout">Sign out</a>
+    <% } else { %>
+    <a href="/signup" class="a1">Signup</a>
+    <a href="/signin" class="a2">Signin</a>
+    <% } %>
+    <br>
+
+    <img src="img/lionsecret2.png">
+</body>
+</html>

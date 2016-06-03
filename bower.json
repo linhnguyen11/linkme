@@ -1,0 +1,13 @@
+{
+  "name": "MEAN",
+  "version": "0.0.7",
+  "dependencies": {
+    "angular": "~1.2",
+    "angular-route": "~1.2",
+    "angular-resource": "~1.2",
+    "jquery": "~1.11.3",
+    "bootstrap": "~3.3.5",
+    "ng-file-upload": "*",
+    "dropzone": "https://github.com/enyo/dropzone.git#~3.10.2"
+  }
+}
